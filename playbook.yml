@@ -1,15 +1,9 @@
 ---
+
 - hosts: docker
-  tasks:
-  - name: Install Docker.
-    package:
-      name: "{{ docker_package }}"
-      state: "{{ docker_package_state }}"
-    notify: restart docker
-
-  - name: restart Docker
-    service:
-      name: docker
-      state: "{{ docker_service_state }}"
-      enabled: "{{ docker_service_enabled }}"
-
+  gathering_facts: true
+  become_user: vagrant
+  become: yes
+  
+  Roles:
+  - Docker
