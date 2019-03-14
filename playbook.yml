@@ -5,5 +5,5 @@
   become_user: vagrant
   become: yes
   
-  Roles:
+  roles:
   - Docker
