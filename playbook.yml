@@ -1,9 +1,0 @@
----
-
-- hosts: docker
-  gathering_facts: true
-  become_user: vagrant
-  become: yes
-  
-  roles:
-  - Docker
